@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "97d682b5-136e-4ead-8863-5439f5f10a67",
+		"name": "AEE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Centro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"NOME_CENTRO\": \"{{Nome da Casa Espírita}}\",\n  \"CNPJ_CENTRO\": \"TEMP\",\n  \"DATA_FUNDACAO\": \"1/1/2000\",\n  \"ENDERECO\": \"{{Endereço}}\",\n  \"CEP\": \"{{CEP}}\",\n  \"BAIRRO\": \"{{Bairro}}\",\n  \"CIDADE\": \"{{Cidade}}\",\n  \"ESTADO\": \"{{Estado}}\",\n  \"PAIS\": \"{{Pais}}\",\n  \"NOME_REGIONAL\": \"{{Regional}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/centros",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"centros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Centro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/centros/10",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"centros",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Centro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/centros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"centros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Centro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Ana Paula\",\n\t\"cpf\": \"31581653840\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/centros/8",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"centros",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Regional",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"NOME_REGIONAL\": \"{{NOME_REGIONAL}}\",\n  \"PAIS\": \"BRASIL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/regionais",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"regionais"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Regional",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/regionais",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"regionais"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Regional",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/centros/10",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"centros",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Regional",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Ana Paula\",\n\t\"cpf\": \"31581653840\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/v1/centros/8",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"centros",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "df974084-6885-477d-96f6-2bb060fbf88b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "787575a0-ca63-4b83-9c0c-023d6263cc7d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

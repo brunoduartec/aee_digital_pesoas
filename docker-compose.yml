@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  aee_digital_pessoas:
+    build: .
+    command: npm start
+    image: aee_digital_pessoas
+    container_name: aee_digital_pessoas
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/app
+    depends_on:
+      - mongo
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "27017:27017"
+  mongo-express:
+    image: mongo-express
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo
+      - ME_CONFIG_MONGODB_PORT=27017
+    depends_on:
+      - mongo
+    ports:
+      - "30200:8081"
+    restart: always
