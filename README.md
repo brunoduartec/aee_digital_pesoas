@@ -1,4 +1,4 @@
-# aee_digital_regionais
+# aee_digital_pessoas
 
 Projeto de backend para aplicativos da Aliança Espirita Evangelica.
 
